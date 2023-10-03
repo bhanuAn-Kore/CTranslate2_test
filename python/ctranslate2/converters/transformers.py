@@ -1194,11 +1194,11 @@ class MPTLoader(ModelLoader):
         spec.beta = torch.zeros_like(spec.gamma)
 
 
-@register_loader("LlamaConfig")
+@register_loader("MistralConfig")
 class LlamaLoader(ModelLoader):
     @property
     def architecture_name(self):
-        return "LlamaForCausalLM"
+        return "MistralForCausalLM"
 
     def get_model_spec(self, model):
         num_layers = model.config.num_hidden_layers
